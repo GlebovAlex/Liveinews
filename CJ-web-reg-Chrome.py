@@ -52,7 +52,8 @@ class Registration(unittest.TestCase):
             "(.//*[normalize-space(text()) and normalize-space(.)='Terms of Service'])[1]/following::span[1]").click()
         time.sleep(4)
         # submit the registration
-        driver.find_element_by_name("wp-submit").click()
+        driver.find_element_by_name("register").click()
+        time.sleep(4)
 
     def tearDown(self):
         # close the browser window

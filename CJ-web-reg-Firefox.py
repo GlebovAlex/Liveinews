@@ -43,8 +43,8 @@ class Registration(unittest.TestCase):
         driver.find_element_by_xpath(
             "(.//*[normalize-space(text()) and normalize-space(.)='Terms of Service'])[1]/following::span[1]").click()
         # submit the registration
-        driver.find_element_by_name("wp-submit").click()
-        time.sleep(5)
+        driver.find_element_by_name("register").click()
+        time.sleep(4)
 
     def tearDown(self):
         # close the browser window
