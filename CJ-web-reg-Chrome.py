@@ -1,14 +1,13 @@
+#!/usr/bin/python3
 import unittest
 import time
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.keys import Keys
-
-
-
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.options import Options
 class Registration(unittest.TestCase):
     def setUp(self):
-        # create a new Chrome session
         global driver
         options = Options()
         options.headless = True
@@ -16,9 +15,9 @@ class Registration(unittest.TestCase):
         options.add_argument('--disable-dev-shm-usage')
         options.binary_location = '/usr/bin/google-chrome'
         driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
+        #driver = webdriver.Chrome(executable_path='chromedriver.exe')
         driver.implicitly_wait(30)
         driver.maximize_window()
-        # navigate to the application home page
         driver.get("http://liveinews.com/login/")
 
     def test_web_registeration(self):
@@ -42,22 +41,31 @@ class Registration(unittest.TestCase):
         select_city = Select(driver.find_element_by_id("cityId"))
         select_city.select_by_visible_text("San Jose, Santa Clara County")
         driver.find_element_by_id("i-e-paypal").send_keys("u3.qallab@gmail.com")
-        driver.find_element_by_name("register").click()
-        # accept the Terms and Conditions
-        element = driver.find_element_by_id('acceptterms')
-        element.send_keys(Keys.END)
+        elementsubmit = driver.find_element_by_xpath('//input[@type="submit"]')
+        actions = ActionChains(driver)
+        actions.move_to_element(elementsubmit).click().perform()
+        element_accept = driver.find_element_by_id('acceptterms')
+        actions_accept = ActionChains(driver)
+        actions_accept.move_to_element(element_accept).perform()
+        element_accept.send_keys(Keys.END)
+        #element_accept.click()
         time.sleep(4)
-        driver.find_element_by_id("acceptterms").click()
-        driver.find_element_by_xpath(
-            "(.//*[normalize-space(text()) and normalize-space(.)='Terms of Service'])[1]/following::span[1]").click()
+        element_acc=driver.find_element_by_id("acceptterms")
+        actions_acc=ActionChains(driver)
+        actions_acc.move_to_element(element_acc).click().perform()
+        element_term =driver.find_element_by_xpath(
+            "(.//*[normalize-space(text()) and normalize-space(.)='Terms of Service'])[1]/following::span[1]")
+        actions_term=ActionChains(driver)
+        actions_term.move_to_element(element_term).click().perform()
         time.sleep(4)
-        # submit the registration
-        driver.find_element_by_name("register").click()
+        element_submit = driver.find_element_by_xpath("//input[@name='register']")
+        actions_submit = ActionChains(driver)
+        actions_submit.move_to_element(element_submit).click().perform()
         time.sleep(4)
 
-    def tearDown(self):
-        # close the browser window
-        driver.quit()
+
+        def tearDown(self):
+            self.driver.quit()
 
 if __name__ == '__main__':
     unittest.main()
