@@ -1,0 +1,26 @@
+{
+    "users": [
+        {
+            "Username": "u31.qallab",
+            "Password": "Test@1234"
+        },
+        {
+            "Username": "u2qallab",
+            "Password": "Test@1234"
+        }
+    ],
+    "new_users": [
+        {
+            "EmailAddress": "u2.qallab@gmail.com",
+            "Password": "Test@1234",
+            "Confirm password":"Test@1234",
+            "Username":"u21qallab"
+        },
+        {
+           "EmailAddress": "u1.qallab@gmail.com",
+            "Password": "Test@1234",
+            "Confirm password":"Test@1234",
+            "Username":"u1qallab"
+        }
+    ]
+}
