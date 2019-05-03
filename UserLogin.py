@@ -1,13 +1,20 @@
+#!/usr/bin/python3
 import unittest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 
 class UserLogin(unittest.TestCase):
-
     def setUp(self):
-        self.driver = webdriver.Chrome()
-        self.driver = webdriver.Chrome(executable_path='/Users/magdalena/Desktop/python_automation/chromedriver')
+        global options
+        options = Options()
+        options.headless = True
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.binary_location = '/usr/bin/google-chrome'
+
+        driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
         self.driver.implicitly_wait(10)
         self.driver.maximize_window()
         self.driver.get("http://liveinews.com/login/")
@@ -19,7 +26,7 @@ class UserLogin(unittest.TestCase):
         self.driver.implicitly_wait(10)
 
 
-def tearDown(self):
+    def tearDown(self):
     self.driver.close()
 
 
