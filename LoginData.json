@@ -21,6 +21,12 @@
             "Password": "Test@1234",
             "Confirm password":"Test@1234",
             "Username":"u1qallab"
+        },
+        {
+            "EmailAddress": "charanyachinnasamy@yahoo.com",
+            "Password": "Test@1234",
+            "Confirm password": "Test@123",
+            "Username": "u1qallab"
         }
     ]
 }

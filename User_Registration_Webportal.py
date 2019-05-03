@@ -45,7 +45,7 @@ class RegisterUser(unittest.TestCase):
                     time.sleep(1)
                     element_term = driver.find_element_by_xpath("//span[@class='btn btn-default']")
                     ActionChains(driver).move_to_element(element_term).click(element_term).perform()
-                    element_finalsubmit = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,"//input[@value='Submit']")))
+                    element_finalsubmit = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.XPATH,"//input[@value='Submit']")))
                     element_finalsubmit.click()
                     #driver.find_element_by_xpath("//input[@value='Submit']").click()
                     print(users['username']+" registered successfully")
