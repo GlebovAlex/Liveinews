@@ -5,6 +5,8 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 import unittest
 import time
 serverUrl = "http://liveinews.com/login/"
@@ -43,7 +45,7 @@ class RegisterUser(unittest.TestCase):
                     time.sleep(1)
                     element_term = driver.find_element_by_xpath("//span[@class='btn btn-default']")
                     ActionChains(driver).move_to_element(element_term).click(element_term).perform()
-					element_finalsubmit = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,"//input[@value='Submit']")))
+                    element_finalsubmit = WebDriverWait(driver,10).until(EC.presence_of_element_located((By.XPATH,"//input[@value='Submit']")))
                     element_finalsubmit.click()
                     #driver.find_element_by_xpath("//input[@value='Submit']").click()
                     print(users['username']+" registered successfully")
