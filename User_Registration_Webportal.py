@@ -51,11 +51,10 @@ class RegisterUser(unittest.TestCase):
                     print(users['username']+" registered successfully")
                 except Exception as e:
                     print(users['Username'] + " cannot register successfully due to the error")
-
-                    try:
-                        error = driver.find_element_by_xpath("//p[@class='errors-p']").text
-                        print(error)
-                    except:
+                    error = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'errors-p')))
+                    if error:
+                        print(error.text)
+                    else:
                         print(e)
 
     def tearDown(self):
