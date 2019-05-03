@@ -31,7 +31,8 @@ class RegisterUser(unittest.TestCase):
                     WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath("//input[@name='password']")).send_keys(users['Password'])
                     WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath("//input[@name='confirm_password']")).send_keys(users['Confirm password'])
                     WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath("//input[@name='login']")).send_keys(users['Username'])
-                    WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath("//input[@name='register']")).click()
+                    element_submit = WebDriverWait(driver, 10).until(lambda driver: driver.find_element_by_xpath("//input[@name='register']"))
+                    ActionChains(driver).move_to_element(element_submit).click().perform()
                     driver.switch_to.window(driver.window_handles[-1])
                     element_accept = WebDriverWait(driver, 30).until(lambda driver: driver.find_element_by_id('acceptterms'))
                     ActionChains(driver).move_to_element(element_accept).perform()
@@ -46,10 +47,11 @@ class RegisterUser(unittest.TestCase):
                     print(users['username']+" registered successfully")
                 except Exception as e:
                     print(users['Username'] + " cannot register successfully due to the error")
-                    error = driver.find_element_by_xpath("//p[@class='errors-p']").text
-                    if error:
+
+                    try:
+                        error = driver.find_element_by_xpath("//p[@class='errors-p']").text
                         print(error)
-                    else:
+                    except:
                         print(e)
 
     def tearDown(self):
