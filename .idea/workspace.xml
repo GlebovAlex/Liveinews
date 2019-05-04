@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b68930e6-db0a-4a4c-855a-4a20c25eaf12" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/User_Registration_Webportal.py" beforeDir="false" afterPath="$PROJECT_DIR$/User_Registration_Webportal.py" afterDir="false" />
-    </list>
+    <list default="true" id="b68930e6-db0a-4a4c-855a-4a20c25eaf12" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/User_Registration_Webportal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+            <state relative-caret-position="194">
+              <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -189,6 +187,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974359" visible="true" weight="0.25520834" />
       <window_info id="Structure" order="1" sideWeight="0.50256413" side_tool="true" visible="true" weight="0.25520834" />
@@ -221,8 +220,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/User_Registration_Webportal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        <state relative-caret-position="194">
+          <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
         </state>
       </provider>
     </entry>
