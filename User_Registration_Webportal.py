@@ -48,7 +48,7 @@ class RegisterUser(unittest.TestCase):
                     time.sleep(1)
                     element_finalsubmit =  driver.find_element_by_xpath("//input[@name='register']")
                     #element_finalsubmit = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.XPATH,"//input[@value='Submit']")))
-                    element_finalsubmit.click()
+                    ActionChains(driver).move_to_element(element_finalsubmit).click().perform()
                     #driver.find_element_by_xpath("//input[@value='Submit']").click()
                     print(users['username']+" registered successfully")
                 except Exception as e:
