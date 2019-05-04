@@ -23,8 +23,8 @@ class RegisterUser(unittest.TestCase):
             data = json.load(RegisterData)
             for users in data['new_users']:
                 try:
-                    #driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
-                    driver = webdriver.Chrome(executable_path='chromedriver.exe')
+                    driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
+                    #driver = webdriver.Chrome(executable_path='chromedriver.exe')
                     driver.get(serverUrl)
                     driver.maximize_window()
                     accounttypelocator = "select#i-e-type option[value='user']"
