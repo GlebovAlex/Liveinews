@@ -23,8 +23,8 @@ class RegisterUser(unittest.TestCase):
             data = json.load(RegisterData)
             for users in data['new_users']:
                 try:
-                    driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
-                    #driver = webdriver.Chrome(executable_path='chromedriver.exe')
+                    #driver = webdriver.Chrome(options=options, executable_path='/usr/bin/chromedriver')
+                    driver = webdriver.Chrome(executable_path='chromedriver.exe')
                     driver.get(serverUrl)
                     driver.maximize_window()
                     accounttypelocator = "select#i-e-type option[value='user']"
@@ -48,18 +48,17 @@ class RegisterUser(unittest.TestCase):
                     time.sleep(1)
                     element_finalsubmit =  driver.find_element_by_xpath("//input[@name='register']")
                     ActionChains(driver).move_to_element(element_finalsubmit).click().perform()
-                    print(users['username']+" registered successfully")
-                except Exception as e:
-                    print(users['Username'] + " cannot register successfully due to the error")
+                    print(users['Username']+" registered successfully")
                     time.sleep(4)
                     error = driver.find_element_by_xpath("//p[@class='errors-p']")
                     if error:
                         print(error.text)
-                    else:
-                        print(e)
+                except Exception as e:
+                    print(users['Username'] + " cannot register successfully due to the error")
+                    print(e)
 
     def tearDown(self):
-        self.driver.quit()
+
         print("------------End of Registration  Test script execution-------------")
 
 if __name__ == "__main__":

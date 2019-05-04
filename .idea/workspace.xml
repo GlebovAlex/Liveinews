@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b68930e6-db0a-4a4c-855a-4a20c25eaf12" name="Default Changelist" comment="" />
+    <list default="true" id="b68930e6-db0a-4a4c-855a-4a20c25eaf12" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/User_Registration_Webportal.py" beforeDir="false" afterPath="$PROJECT_DIR$/User_Registration_Webportal.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/User_Registration_Webportal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
+            <state relative-caret-position="74">
+              <caret line="52" column="59" lean-forward="true" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -184,6 +186,9 @@
     <history-entry file="Unittests_for_User_Registration_Webportal_RegisterUser_test_register - 2019.05.03 at 17h 45m 02s.xml">
       <configuration name="Unittests for User_Registration_Webportal.RegisterUser.test_register" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_for_User_Registration_Webportal_RegisterUser_test_register - 2019.05.03 at 18h 21m 49s.xml">
+      <configuration name="Unittests for User_Registration_Webportal.RegisterUser.test_register" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -220,8 +225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/User_Registration_Webportal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="52" column="95" lean-forward="true" selection-start-line="52" selection-start-column="95" selection-end-line="52" selection-end-column="95" />
+        <state relative-caret-position="74">
+          <caret line="52" column="59" lean-forward="true" selection-start-line="52" selection-start-column="59" selection-end-line="52" selection-end-column="59" />
         </state>
       </provider>
     </entry>
