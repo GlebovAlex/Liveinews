@@ -51,9 +51,9 @@ class RegisterUser(unittest.TestCase):
                     print(users['username']+" registered successfully")
                 except Exception as e:
                     print(users['Username'] + " cannot register successfully due to the error")
-                    error = driver.find_element_by_xpath("//p[@class='errors-p']").text
+                    error = driver.find_element_by_xpath("//p[@class='errors-p']")
                     if error:
-                        print(error)
+                        print(error.text)
                     else:
                         print(e)
 
