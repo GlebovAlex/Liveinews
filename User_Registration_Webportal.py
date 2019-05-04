@@ -47,15 +47,13 @@ class RegisterUser(unittest.TestCase):
                     ActionChains(driver).move_to_element(element_term).click(element_term).perform()
                     time.sleep(1)
                     element_finalsubmit =  driver.find_element_by_xpath("//input[@name='register']")
-                    #element_finalsubmit = WebDriverWait(driver,20).until(EC.presence_of_element_located((By.XPATH,"//input[@value='Submit']")))
                     ActionChains(driver).move_to_element(element_finalsubmit).click().perform()
-                    #driver.find_element_by_xpath("//input[@value='Submit']").click()
                     print(users['username']+" registered successfully")
                 except Exception as e:
                     print(users['Username'] + " cannot register successfully due to the error")
-                    error = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'errors-p')))
+                    error = driver.find_element_by_xpath("//p[@class='errors-p']").text
                     if error:
-                        print(error.text)
+                        print(error)
                     else:
                         print(e)
 
